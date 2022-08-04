@@ -1,0 +1,570 @@
+html{
+    scroll-behavior: smooth;
+    font-family: "Mulish", Helvetica, Arial, sans-serif !important;
+}
+body{
+  color: white;
+  background-color: #1a1a23;
+  font-size: 18px;
+}
+h1{
+  font-size: 20px;
+  line-height: 1;
+  padding: 20px 0;
+  text-align: center;
+}
+h2{
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+h3{
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+  padding: 20px;
+}
+p{
+  font-size: 18px;
+  padding: 5px 0;
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+header{
+    grid-row: 2;
+    /* grid-column: 1/-1; */
+    background-attachment: fixed; /* Parallax effect */
+    background-image: url("../images/annarbor.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    height: 575px;
+    overflow: hidden;
+  }
+
+  /* .header-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+  } */
+
+  /* .header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } */
+
+
+
+
+  .header-h2{
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    weight: none;
+  }
+
+  .header-h3{
+    font-size: 12px;
+    color: #ffcb05;
+    text-align: center;
+    text-decoration: none;
+    weight: none;
+  }
+
+  a{
+    color: #ffcb05;
+    text-decoration: none;
+  }
+  .skip a{
+    background: rgba(255, 255, 255, .8);
+    color: black;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  }
+  .skip a:focus{
+    top: 0px;
+  }
+  :focus{
+    outline: 2px solid white;
+  }
+  .nav{
+    background-color: #333545;
+    display: flex;
+    flex-direction: column;
+    flex-flow: row wrap;
+    justify-content:center;
+    padding: 10px;
+    text-align: center;
+  }
+  .nav ul{
+    font-size: 24px;
+
+  }
+  .nav a{
+    display: block;
+    color: #848AB5;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .nav a:hover{
+    text-decoration: underline;
+  }
+  a.current{
+    background: rgba(189, 196, 255, 0.2);
+    color: #BDC4FF;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+.index-container{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  align-items: center;
+  grid-gap: 10px;
+  padding-bottom: 200px;
+}
+.about-container, .schedule-container, .social-container{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+  align-items: center;
+  grid-gap: 10px;
+  padding-bottom: 100px;
+}
+.about-about-image, .schedule-schedule-image, .social-social-image{
+  grid-row: 2;
+  max-width: 100%;
+  max-height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+.about-text,.schedule-text{
+  grid-row: 1;
+  margin-left: 10px;
+}
+.social-text{
+  grid-row: 1;
+  margin-left: 10px;
+}
+.social-text p,h2,h3,a{
+  text-align: center;
+}
+.social-text a{
+  color: white;
+}
+.social-icon{
+  text-align:center;
+}
+.social-icon img{
+  height: 35px;
+}
+.about-text>h3, .schedule-text>h3, .social-text>h3{
+  color:#ffcb05;
+}
+.form{
+  background: rgba(255, 255, 255, .1);
+  grid-row: 2;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about{
+  background: rgba(255, 255, 255, .05);
+  grid-row: 4;
+}
+.about-image{
+  grid-row: 3;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 300px;
+}
+.schedule{
+  background: rgba(255, 255, 255, .05);
+  grid-row: 6;
+}
+.contact-sarah{
+  background: rgba(255, 255, 255, .05);
+}
+.schedule-image{
+  grid-row: 5;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 300px;
+}
+.social{
+  background: rgba(255, 255, 255, .05);
+  grid-row: 8;
+  padding-bottom: 20px;
+}
+.social-image{
+  margin-left: auto;
+  margin-right: auto;
+  grid-row: 7;
+  max-width: 100%;
+  max-height: 300px;
+}
+.wgym-image,.nationals-image{
+  margin-left: auto;
+  margin-right: auto;
+  grid-row: 6;
+  max-width: 300px;
+}
+.mgym-image{
+  margin-left: auto;
+  margin-right: auto;
+  grid-row: 5;
+  max-width: 300px;
+}
+/* The grid: Four equal columns that floats next to each other */
+.column{
+  float: left;
+  width: 17%;
+  padding: 5px;
+}
+/* Style the images inside the grid */
+.column>img {
+  opacity: 0.8;
+  cursor: pointer;
+  height: 50px;
+}
+.column>img:hover {
+  opacity: 1;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.photo-gallery{
+  grid-row: 6;
+}
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.gallery-container {
+  position: relative;
+  display: none;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+footer{
+  grid-row: 10/-1;
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+footer p{
+  text-align: center;
+}
+footer>img{
+  display: inline-block;
+}
+
+
+/*
+@media screen and (min-width: 600px){
+  h1{
+    font-size: 55px;
+  }
+  h2{
+    font-size: 45px;
+  }
+  h3{
+    font-size: 35px;
+    text-align: left;
+    margin-left: 30px;
+  }
+  h4{
+    font-size: 28px;
+    text-align: center;
+  }
+  p{
+    font-size: 28px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .header-h2{
+      font-size: 30px;
+  }
+  .header-h3{
+      font-size: 25px;
+  }
+  .nav{
+      display: block;
+  }
+  .nav ul{
+    font-size: 40px;
+  }
+  .nav a{
+    display: block;
+    color: #ffcb05;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+  }
+
+  .form{
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+  }
+  .social-icon img{
+    height: 60px;
+  }
+  .wgym-image{
+    max-width: 60%;
+    padding-left: 250px;
+}
+  .nationals-image{
+    max-width: 60%;
+    padding-top: 50px;
+    padding-left: 150px;
+}
+.gym-images p{
+  text-align: center;
+}
+  .mgym-image{
+    max-width: 60%;
+    padding-top: 30px;
+    padding-left: 65px;
+  }
+  .column>img {
+    height: 100px;
+  }
+} */
+
+
+@media screen and (min-width: 1200px){
+
+  h1{
+    font-size: 60px;
+    line-height: 1;
+    padding: 45px 0;
+    text-align: center;
+  }
+  h2{
+    font-size: 45px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  h3{
+    font-size: 35px;
+    line-height: 1.5;
+    text-align: left;
+    padding: 20px;
+  }
+  h4{
+    font-size: 30px;
+  }
+  p{
+    font-size: 26px;
+    padding: 5px 0;
+    text-align: left;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  header{
+      grid-row: 2;
+      grid-column: 1/-1;
+      height: 500px;
+    }
+
+    .header-h2{
+      font-size: 25px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-align: center;
+      text-decoration: none;
+      weight: none;
+    }
+    .header-h3{
+      font-size: 20px;
+      color: #ffcb05;
+      text-align: center;
+      text-decoration: none;
+      weight: none;
+    }
+
+.nav{
+  display:flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+    .nav ul{
+      display:flex;
+      font-size: 25px;
+    }
+
+  .index-container{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-template-columns: 200px auto auto 200px;
+    align-items: center;
+    grid-gap: 10px;
+    padding-bottom: 200px;
+  }
+  .about-container, .schedule-container, .social-container{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 200px auto auto 200px;
+    grid-gap: 10px;
+    padding-bottom: 100px;
+  }
+  .about-about-image, .schedule-schedule-image, .social-social-image{
+    max-width: 100%;
+    max-height: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+  }
+  .about-text,.schedule-text{
+    grid-row: 1;
+    grid-column: 2/3;
+    margin-left: 10px;
+  }
+  .social-text{
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .social-text p,h2,h3,a{
+    text-align: left;
+  }
+
+  .social-icon img{
+    height: 75px;
+  }
+
+  .form{
+    grid-column: 3;
+    grid-row: 1;
+    background: rgba(255, 255, 255, .1);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .my-projects{
+    grid-row: 3;
+    grid-column: 3;
+  }
+
+  .about{
+    padding-bottom: 100px;
+    background: none;
+    grid-row: 4;
+    grid-column: 3;
+  }
+  .about-image{
+    grid-row: 4;
+    grid-column: 2;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 300px;
+  }
+  .schedule{
+    padding-bottom: 100px;
+    background: none;
+    grid-row: 5;
+    grid-column: 3;
+  }
+
+  .schedule-image{
+    grid-row: 5;
+    grid-column: 2;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 300px;
+  }
+  .social{
+    padding-bottom: 100px;
+    background: none;
+    grid-row: 6;
+    grid-column:3;
+    padding-bottom: 20px;
+  }
+  .social-image{
+    grid-row: 6;
+    grid-column: 2;
+    max-width: 100%;
+    max-height: 300px;
+  }
+
+  .gym-images{
+    display: inline-block;
+    grid-column: 2 / span 2;
+    grid-row: 5;
+  }
+
+  .nationals-image{
+    grid-row: 6;
+    max-width: 100%;
+  }
+
+  .column>img {
+    height: 150px;
+}
+  .photo-gallery{
+    padding-top: 100px;
+    padding-left: 100px;
+    grid-row: 3;
+    grid-column: 2 / span 2;
+  }
+
+
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    background: white;
+    color: black;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;
+    transition: none !important;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
